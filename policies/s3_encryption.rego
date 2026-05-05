@@ -1,9 +1,14 @@
 # Política OPA/Rego: todos los buckets S3 deben tener cifrado SSE-KMS
 #
 # Uso:
-#   conftest test <ficheros>.tf --policy policies/ --parser hcl2 --all-namespaces
+#   conftest test <ficheros>.tf --policy Labs/Lab15/policies/ --parser hcl2 --all-namespaces
 
 package terraform.s3
+
+# Habilita el syntax Rego v1 (if/contains/in/every) en OPA v0.x.
+# En OPA v1.0+ es el comportamiento por defecto y este import es opcional,
+# pero se mantiene para máxima compatibilidad con versiones anteriores de conftest.
+import rego.v1
 
 # ── Regla 1: bucket sin configuración de cifrado ──────────────────────────────
 deny contains msg if {
