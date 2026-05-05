@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "labs/Lab15/aws/**"
+      - "terraform/**"
   pull_request:
     branches: [main]
     paths:
-      - "labs/Lab15/aws/**"
+      - "terraform/**"
 
 permissions:
   id-token: write   # Requerido para solicitar el token OIDC
@@ -16,7 +16,7 @@ permissions:
 
 env:
   AWS_REGION: us-east-1
-  TF_DIR: labs/Lab15/aws
+  TF_DIR: terraform
 
 jobs:
   # ─────────────────────────────────────────────────────────────────────────
