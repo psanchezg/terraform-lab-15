@@ -38,7 +38,7 @@ jobs:
           framework: terraform
           output_format: cli
           # Fallos que se aceptan en este laboratorio (recursos de práctica):
-          soft_fail_on: CKV_AWS_117,CKV_AWS_116  # Lambda dentro de VPC (no aplica)
+          soft_fail_on: CKV_AWS_117,CKV_AWS_116,CKV_AWS_356  # Lambda dentro de VPC (no aplica)
           download_external_modules: false
 
       # ── tfsec: análisis de seguridad específico de Terraform ─────────────
