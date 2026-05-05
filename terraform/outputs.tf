@@ -12,3 +12,8 @@ output "github_actions_role_name" {
   description = "Nombre del rol IAM para GitHub Actions"
   value       = aws_iam_role.github_actions.name
 }
+
+output "github_actions_role_name_bis" {
+  description = "Nombre del rol IAM para GitHub Actions"
+  value       = aws_iam_role.github_actions.name
+}
