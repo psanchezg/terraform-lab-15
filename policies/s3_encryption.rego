@@ -1,7 +1,7 @@
 # Política OPA/Rego: todos los buckets S3 deben tener cifrado SSE-KMS
 #
 # Uso:
-#   conftest test <ficheros>.tf --policy Labs/Lab15/policies/ --parser hcl2 --all-namespaces
+#   conftest test <ficheros>.tf --policy policies/ --parser hcl2 --all-namespaces
 
 package terraform.s3
 

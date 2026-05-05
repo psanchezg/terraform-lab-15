@@ -64,7 +64,7 @@ jobs:
           # Aquí se valida el directorio de terraform directamente
           # conftest no descubre .tf automáticamente: se pasan con glob explícito
           conftest test ${{ env.TF_DIR }}/*.tf \
-            --policy labs/Lab15/policies/ \
+            --policy policies/ \
             --parser hcl2 \
             --all-namespaces \
             --no-color
